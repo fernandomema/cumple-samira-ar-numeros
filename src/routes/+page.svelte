@@ -2,7 +2,6 @@
     import { onMount } from "svelte";
     import foreground from '$lib/assets/foreground.png';
     import background from '$lib/assets/background.png';
-    import { onMount as onMountSvelte } from 'svelte';
 
     let randomNumber;
     let randomY;
@@ -37,7 +36,7 @@
         25: "¡Sorpresa!"
     }
 
-    onMountSvelte(() => {
+    onMount(() => {
         // Generar número random y posición Y random (mínimo 35% hacia abajo)
         setTimeout(() => {
             const getParams = new URLSearchParams(window.location.search);
